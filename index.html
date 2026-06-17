@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Everyday Wellness Guide | Healthy Lifestyle Resources</title>
+  <meta name="description" content="Explore everyday wellness resources, healthy routines, nutrition awareness, movement habits, rest support, and mindful lifestyle guidance." />
+  <meta name="keywords" content="wellness guide, healthy lifestyle, nutrition awareness, daily routine, mindful living, wellness resources, rest routine, movement habits" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Everyday Wellness Guide" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <meta property="og:title" content="Everyday Wellness Guide | Healthy Lifestyle Resources" />
+  <meta property="og:description" content="Simple educational wellness guidance for balanced daily habits and lifestyle awareness." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f3ea;
+      color: #263832;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: #fffaf1;
+      box-shadow: 0 6px 20px rgba(39, 55, 49, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1f4b43;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #384e48;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+      padding: 14px 26px;
+      font-size: 14px;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #c76f4c;
+      color: #fff;
+      box-shadow: 0 10px 22px rgba(199, 111, 76, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #a95738;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid #1f4b43;
+      color: #1f4b43;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #1f4b43;
+      color: #fff;
+    }
+
+    .hero {
+      padding: 85px 0 70px;
+      background:
+        radial-gradient(circle at top left, rgba(199, 111, 76, 0.14), transparent 34%),
+        linear-gradient(180deg, #fff8ed 0%, #f7f3ea 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #efe0be;
+      color: #1f4b43;
+      padding: 9px 18px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 50px);
+      line-height: 0.98;
+      color: #1f352f;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 590px;
+      font-size: 17px;
+      color: #5f716c;
+      margin-bottom: 34px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .hero-image {
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 28px 60px rgba(31, 53, 47, 0.2);
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+    }
+
+    .stats-strip {
+      margin-top: 42px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 720px;
+    }
+
+    .stat-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(39, 55, 49, 0.08);
+    }
+
+    .stat-box strong {
+      display: block;
+      color: #c76f4c;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .stat-box span {
+      font-size: 13px;
+      color: #61736e;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 48px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      color: #203a34;
+      margin-bottom: 14px;
+      letter-spacing: -1px;
+    }
+
+    .section-title p {
+      color: #687a75;
+      font-size: 15px;
+    }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .area-card {
+      background: #fffdf8;
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 16px 36px rgba(39, 55, 49, 0.08);
+      border: 1px solid rgba(31, 75, 67, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .area-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 22px 44px rgba(39, 55, 49, 0.13);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: #f2dfcf;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      margin-bottom: 22px;
+    }
+
+    .area-card h3 {
+      color: #244b43;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .area-card p {
+      color: #657873;
+      font-size: 14px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .split-img {
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(39, 55, 49, 0.18);
+    }
+
+    .split-img img {
+      height: 420px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .split-content h2 {
+      font-size: 40px;
+      color: #203a34;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .split-content p {
+      color: #60736e;
+      margin-bottom: 24px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .check-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 17px 20px;
+      color: #415852;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(39, 55, 49, 0.07);
+      font-size: 14px;
+    }
+
+    .check-item::before {
+      content: "✓";
+      color: #c76f4c;
+      margin-right: 10px;
+      font-weight: 900;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .resource-card {
+      background: #fffdf8;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(39, 55, 49, 0.09);
+    }
+
+    .resource-card img {
+      height: 230px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .resource-body {
+      padding: 26px;
+    }
+
+    .resource-body h3 {
+      color: #244b43;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .resource-body p {
+      color: #647772;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .small-btn {
+      display: inline-block;
+      background: #ead7b0;
+      color: #253a35;
+      padding: 11px 20px;
+      border-radius: 30px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .cta {
+      padding: 90px 0;
+    }
+
+    .cta-box {
+      min-height: 340px;
+      border-radius: 34px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(31, 75, 67, 0.82), rgba(31, 75, 67, 0.82)),
+        url("https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px;
+      color: #fff;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: #edf5f2;
+    }
+
+    .faq-wrap {
+      max-width: 850px;
+      margin: auto;
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-item {
+      background: #fffdf8;
+      padding: 24px 28px;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(39, 55, 49, 0.08);
+    }
+
+    .faq-item h3 {
+      color: #244b43;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #687a75;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #1f352f;
+      color: #e9f3ef;
+      text-align: center;
+      padding: 34px 16px;
+      font-size: 14px;
+    }
+
+    footer .links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: #ead7b0;
+      font-weight: 700;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .area-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image img,
+      .split-img img {
+        height: 340px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .navbar {
+        height: auto;
+        padding: 18px 0;
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding: 56px 0;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .stats-strip,
+      .area-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .split-content h2 {
+        font-size: 32px;
+      }
+
+      .cta-box {
+        padding: 34px 22px;
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="logo">Everyday Wellness</a>
+
+      <nav class="nav-links">
+        <a href="#resources">Resources</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#faq">FAQ</a>
+        <a href="#resources" class="btn btn-primary">Explore Options</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Balanced Lifestyle Education</span>
+          <h1>Simple Wellness Habits For Everyday Living</h1>
+          <p>
+            Discover practical wellness guidance focused on food awareness, movement, rest,
+            mindful routines, and simple daily choices for a more balanced lifestyle.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#resources" class="btn btn-primary">Explore Wellness</a>
+            <a href="#faq" class="btn btn-outline">View Questions</a>
+          </div>
+
+          <div class="stats-strip">
+            <div class="stat-box">
+              <strong>4+</strong>
+              <span>Wellness Categories</span>
+            </div>
+            <div class="stat-box">
+              <strong>24/7</strong>
+              <span>Educational Access</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>Informational Content</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=1200&q=80" alt="Healthy wellness meal with vegetables">
+        </div>
+      </div>
+    </section>
+
+    <section id="wellness">
+      <div class="container">
+        <div class="section-title">
+          <h2>Wellness Areas To Build Better Daily Balance</h2>
+          <p>
+            Explore everyday lifestyle areas that may help people understand wellness routines
+            in a simple and practical way.
+          </p>
+        </div>
+
+        <div class="area-grid">
+          <div class="area-card">
+            <div class="icon">🥗</div>
+            <h3>Food Awareness</h3>
+            <p>Learn about balanced meals, mindful eating habits, hydration, and general nutrition awareness.</p>
+          </div>
+
+          <div class="area-card">
+            <div class="icon">🚶</div>
+            <h3>Daily Movement</h3>
+            <p>Explore simple movement habits that may support an active and balanced lifestyle routine.</p>
+          </div>
+
+          <div class="area-card">
+            <div class="icon">🌙</div>
+            <h3>Rest & Recovery</h3>
+            <p>Understand the importance of sleep consistency, recovery, and planned downtime.</p>
+          </div>
+
+          <div class="area-card">
+            <div class="icon">🌿</div>
+            <h3>Natural Lifestyle</h3>
+            <p>Read about plant-based resources, simple routines, and wellness-focused lifestyle choices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container split">
+        <div class="split-img">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80" alt="People doing yoga and movement exercise">
+        </div>
+
+        <div class="split-content">
+          <h2>A Practical Guide To Daily Wellness Choices</h2>
+          <p>
+            A wellness routine does not need to be complicated. Many people begin with small,
+            manageable habits like better hydration, regular movement, planned rest, and mindful food choices.
+          </p>
+
+          <div class="check-list">
+            <div class="check-item">Focus on realistic and simple lifestyle steps</div>
+            <div class="check-item">Explore wellness topics without pressure</div>
+            <div class="check-item">Build awareness around nutrition, rest, and movement</div>
+            <div class="check-item">Use educational resources for general lifestyle guidance</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources">
+      <div class="container">
+        <div class="section-title">
+          <h2>Helpful Wellness Resource Categories</h2>
+          <p>
+            Topic-based wellness information for people looking for general lifestyle education.
+          </p>
+        </div>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80" alt="Nutrition awareness vegetables">
+            <div class="resource-body">
+              <h3>Nutrition Awareness</h3>
+              <p>Explore information about balanced meals, food choices, hydration, and mindful eating awareness.</p>
+              <a href="#" class="small-btn">Learn More</a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80" alt="Mindful living meditation">
+            <div class="resource-body">
+              <h3>Mindful Living</h3>
+              <p>Learn about calm routines, breathing breaks, stress awareness, and simple relaxation habits.</p>
+              <a href="#" class="small-btn">Learn More</a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=900&q=80" alt="Sleep and recovery routine">
+            <div class="resource-body">
+              <h3>Recovery & Rest</h3>
+              <p>Understand sleep routines, recovery habits, rest timing, and general lifestyle consistency.</p>
+              <a href="#" class="small-btn">Explore Options</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>Explore Wellness Resources For Your Daily Routine</h2>
+            <p>
+              Find educational wellness information, lifestyle guidance, and simple routine ideas
+              that may support your personal goals.
+            </p>
+            <a href="#wellness" class="btn btn-primary">Explore Options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Common Questions</h2>
+          <p>Basic answers about lifestyle wellness and general educational resources.</p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <h3>What is a wellness routine?</h3>
+            <p>A wellness routine may include daily habits related to food choices, movement, rest, hydration, and stress awareness.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is wellness the same for everyone?</h3>
+            <p>No. Wellness needs and preferences can vary based on lifestyle, goals, schedule, and personal choices.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>What type of resources are available here?</h3>
+            <p>This website provides general educational content about wellness habits, lifestyle choices, and available wellness options.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Is this website for informational use?</h3>
+            <p>Yes. The content is intended for general informational and educational purposes only.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Everyday Wellness Guide. All Rights Reserved.</p>
+    <div class="links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </footer>
+
+</body>
+</html>
