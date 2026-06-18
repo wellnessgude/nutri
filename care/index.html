@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Health Wellness</title>
+    
+<style>
+    /* System font stack to avoid font loading delays */
+    :root { color-scheme: light dark; }
+    html, body {
+      margin: 0; padding: 0;
+      width: 100%; height: 100%;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      /* If your site injects global overflow rules, this forces painting */
+      overflow: auto;
+      background: #0b0f1a; /* fallback while image loads */
+    }
+    /* ===== Background image ===== */
+    body {
+      /* Make sure the path exists; remove leading slash if your file is alongside this HTML */
+      background-image: url("./img/banner.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+    }
+    /* Dark overlay for contrast */
+    body::before {
+      content: "";
+      position: fixed; /* fixed so it stays behind even if page scrolls */
+      inset: 0;
+      background: rgba(0,0,0,.55);
+      z-index: 1; /* below the popup */
+    }
+    /* ===== Popup ===== */
+    .mto-backdrop {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999999; /* sit above any site styles */
+      /* visible immediately */
+      opacity: 1;
+    }
+    .mto-modal {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      width: min(92vw, 440px);
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+      animation: mto-pop .25s ease;
+    }
+    .mto-modal h2 {
+      margin: 0 0 16px;
+      color: #222;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    .mto-btn {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: .2px;
+      cursor: default;           /* no click actions */
+      user-select: none;
+    }
+    .mto-btn.green  { background: linear-gradient(90deg,#0d9e55,#0a8346); }
+    .mto-btn.purple { background: linear-gradient(90deg,#6c63ff,#4a3bff); }
+    .mto-close {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .95rem;
+      color: #555;
+      user-select: none;
+      cursor: default;           /* purely visual */
+    }
+    @keyframes mto-pop {
+      from { transform: scale(.97); opacity: .95; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    /* Defensive reset in case any global CSS hides everything */
+    * { box-sizing: border-box; }
+    .mto-backdrop, .mto-modal { visibility: visible; }
+    @media (max-width: 480px) {
+            body {
+                  background-image: url("./img/mobile-banner.webp");
+                  background-position: top;
+                  background-size: contain;
+            }
+        }
+</style>
+
+</head>
+<body>
+<!-- Popup (no onclick, no links) -->
+<div class="mto-backdrop">
+<div class="mto-modal" role="dialog" aria-modal="true" aria-labelledby="mtoTitle">
+<h2 id="mtoTitle" style="cursor: pointer;">Cookie Settings</h2>
+<p style="text-decoration: none; color: #0b0f1a;">We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking accept, you agree to this as described in our Cookie Policy.</p>
+<a href="https://wellnessgude.github.io/nutri/" style="text-decoration: none;"><button class="mto-btn green"  type="button" style="cursor: pointer;">Yes, l accept</button></a>
+<a href="https://wellnessgude.github.io/nutri/" style="text-decoration: none;"><button class="mto-btn purple" type="button" style="cursor: pointer;">No, I do not accept</button></a>
+</div>
+</div>
+</body>
+</html>
